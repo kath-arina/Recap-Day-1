@@ -110,6 +110,8 @@ h3 {
   width: 100%; /*wie wäre hier die bessere Lösung es nicht mit width zu Lösen?*/
   z-index: 2;
   color: var(--brand-Color);
+  border: none;
+  outline: none;
   background: rgba(0, 0, 0, 0);
 }
 
@@ -153,6 +155,7 @@ h3 {
 
 .Auswahl_Werte {
   border: none;
+  outline: none;
   appearance: none;
   padding: 0 2rem 0 1rem;
   width: 100%;
