@@ -95,30 +95,22 @@ h3 {
   color: var(--h3_black_60);
 }
 .general_search {
-  border-radius: 2%;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  border: solid var(--brand-Color);
+  outline: solid var(--brand-Color); /*greift hier der Radius?*/
+  border-radius: 2%;
   grid-column: span 5;
 }
 
 .search_input {
   padding: 8px 15px;
   width: 100%; /*wie wäre hier die bessere Lösung es nicht mit width zu Lösen?*/
-  z-index: 1;
-  background-image: url("http://www.w3.org/2000/svg");
-}
-
-input::placeholder {
-  color: #4b148a;
-  font-weight: bold;
-  opacity: 38%;
-}
-
-input:active + :placeholder-shown {
-  color: #4b148a, 0%;
+  z-index: 2;
+  color: var(--brand-Color);
+  background: rgba(0, 0, 0, 0);
 }
 
 .Lupe {
@@ -130,10 +122,20 @@ input:active + :placeholder-shown {
   z-index: 1;
 }
 
-.sr_only {
-  visibility: hidden;
+.placeholder {
   position: absolute;
-  top: -1000%;
+  left: 1rem;
+  z-index: 1;
+  color: #4b148a;
+  font-weight: bold;
+  opacity: 50%;
+  transition: top 1s, font-size 0.2s;
+}
+
+.search_input:focus + .placeholder,
+.search_input:not(:placeholder-shown) + .placeholder {
+  font-size: x-small;
+  top: 0.05rem;
 }
 
 .Klassenauswahl {
