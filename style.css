@@ -93,6 +93,7 @@ h2 {
 
 h3 {
   color: var(--h3_black_60);
+  font-size: 1rem;
 }
 .general_search {
   position: relative;
