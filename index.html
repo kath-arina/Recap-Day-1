@@ -33,10 +33,7 @@
                 preserveAspectRatio="none">
                 <polygon points="0,0 50,5 100,0"></polygon>
             </svg>
-            <svg class="svg-arrow2" width="100%" height="100%" fill="currentColor" viewBox="0 0 100 100"
-                preserveAspectRatio="none">
-                <polygon points="0,0 50,5 100,0"></polygon>
-            </svg>
+
         </div>
 
 
@@ -46,23 +43,55 @@
 
 
     <main>
-        <section>
-            <h2 class="h2">STUDENTS</h2>
-            <h3 class="subheadline">Your fellow students</h3>
-            <input type="search"> <!--Hier fehlen noch ein paar eigenschaften-->
-            <label for="search">Search for students names</label>
-            <select name="classes" id="classes">DROPDOWN-PLACEHOLDER CLASS</select>
-            <label for="classes">classes</label>
-            <option value="class-1"></option>
-            <option value="class-2"></option>
-            <option value="class-3"></option>
-            <select>DROPDOWN PLACEHOLDER WORKING-TIME</select>
-            <label for=""></label>
-            <option value=""></option>
+        <section class="filter">
+            <div class="filter_header">
+                <h2 class="h2">STUDENTS</h2>
+                <h3 class="subheadline">Your fellow students</h3>
+            </div>
 
+            <div class="general_search">
+                <input class="search_input" type="search" id="Suchfeld" name="Suchfeld"
+                    placeholder="Search for students names &#128270">
+                <label class="sr_only" for="search">Search for students names </label>
+                <!--<svg class="Lupe" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>-->
+            </div>
+            <div class="Klassenauswahl">
+                <select class="Auswahl_Werte" name="Classes" id="classes">
+                    <option value="März2023">MärzClass2023</option>
+                    <option value="Februar2023">FebruarClass2023</option>
+                    <option value="Januar2023">JanuarClass2023</option>
+                </select>
+                <div class="Auswahl_Icon">
+                    <svg class="Pfeil_unten" xmlns=" http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+            </div>
+            <div class=" Zeitauswahl">
+                <select class="Auswahl_Werte">
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+
+                </select>
+                <div class="Auswahl_Icon">
+                    <svg class="Pfeil_unten" xmlns=" http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+            </div>
         </section>
-        <section class="member_list">
-            <h3>Full-time März Class of 2023</h3>
+
+        <h3 class="Output_headline">Full-time März Class of 2023</h3>
+
+        <Section class="member_list">
             <article class="member_tag">
                 <div class="member_icon">
                     <svg class="avatar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -74,7 +103,7 @@
                 <span class="name">
 
                     <p>Lucy</p>
-                    <a href="https://github.com/lucywo">GitHub Lucy</a>
+                    <a class="Link" href="https://github.com/lucywo">github.com/lucywo</a>
                 </span>
             </article>
             <article class="member_tag">
@@ -87,7 +116,7 @@
                 </div>
                 <span class="name">
                     <p>Annelie</p>
-                    <a href="https://github.com/awachstein">GitHub Annelie</a>
+                    <a class="Link" href="https://github.com/awachstein">github.com/awachstein</a>
                 </span>
 
 
@@ -102,7 +131,7 @@
                 </div>
                 <span class="name">
                     <p>Paula</p>
-                    <a href="https://github.com/PaulaAshvillage">GitHub Paula</a>
+                    <a class="Link" href="https://github.com/PaulaAshvillage">github.com/PaulaAshvillage</a>
                 </span>
 
 
@@ -117,9 +146,8 @@
                 </div>
                 <span class="name">
                     <p>Kai</p>
-                    <a href="https://github.com/KaiWelu">GitHub Kai</a>
+                    <a class="Link" href="https://github.com/KaiWelu">github.com/KaiWelu</a>
                 </span>
-
 
             </article>
             <article class="member_tag">
@@ -132,24 +160,27 @@
                 </div>
                 <span class="name">
                     <p>Davor</p>
-                    <a href="https://github.com/krekeny-davor">GitHub Davor</a>
+                    <a class="Link" href="https://github.com/krekeny-davor">github.com/krekeny-davor</a>
                 </span>
 
             </article>
 
-            <!--  <article class="member_tag">
-<div class="member_icon">
-                    <svg class="avatar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                      </svg>
+            <article class="member_tag">
+                <div class="member_icon">
+                    <svg class="avatar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                    </svg>
                 </div>
-                                <span class="name">
-                                    <p>Katharina</p>
-                        
-                                    <a href="https://github.com/kath-arina">GutHub Katharina</a>
-                                </span>
-                
-            </article>-->
+                <span class="name">
+                    <p>Katharina</p>
+
+                    <a class="Link" href="https://github.com/kath-arina">github.com/kath-arina</a>
+                </span>
+
+            </article>
+
 
         </section>
     </main>
